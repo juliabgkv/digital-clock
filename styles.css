@@ -14,8 +14,27 @@ body {
 
 .clock {
     font-size: 100px;
+    letter-spacing: 3px;
 }
 
 .date {
     font-size: 20px;
+}
+
+@media(max-width: 610px) {
+    .clock {
+        font-size: 60px;
+    }
+    .date {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 390px) {
+    .clock {
+        font-size: 40px;
+    }
+    .date {
+        font-size: 10px;
+    }
 }
