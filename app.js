@@ -1,4 +1,3 @@
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const displayDateElem = document.getElementById('displayDate');
 const displayClockElem = document.getElementById('displayClock');
 
@@ -32,16 +31,14 @@ function generateDate() {
         currDate.session = 'PM';
     }
 
-    const dayKey = date.getDay();
-    currDate.weekDay = days[dayKey].toUpperCase();
+    currDate.weekDay = date.toLocaleDateString('en-US', { weekday: 'long' });
 
     return currDate;
 }
 
 
 function formatWithZero(value) {
-    if(value < 10) return ('0' + value);
-    return value;
+    return value < 10 ? `0${value}` : value;
 }
 
 function displayTime(date) {
