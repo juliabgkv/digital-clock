@@ -31,7 +31,7 @@ function generateDate() {
         currDate.session = 'PM';
     }
 
-    currDate.weekDay = date.toLocaleDateString('en-US', { weekday: 'long' });
+    currDate.weekDay = date.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
 
     return currDate;
 }
